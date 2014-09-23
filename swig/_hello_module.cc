@@ -3464,7 +3464,7 @@ SWIGINTERN PyObject *_wrap_fib(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   result = (int *)fib(arg1);
   {
     int i;
-    size_t  templen = 10;
+    size_t  templen = 100;
     resultobj = PyList_New(templen);
     for (i = 0; i < templen; i++) {
       PyObject *o = PyInt_FromLong((int)result[i]);

@@ -8,7 +8,7 @@
 
 %typemap(out) int* fib {
   int i;
-  size_t  templen = 10;
+  size_t  templen = 100;
   $result = PyList_New(templen);
   for (i = 0; i < templen; i++) {
     PyObject *o = PyInt_FromLong((int)$1[i]);
