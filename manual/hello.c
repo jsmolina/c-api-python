@@ -1,5 +1,5 @@
 #include <Python/Python.h>
-//#include "hello.c"
+#include "hellomodule.h"
 
 static PyObject * fib_wrapper( PyObject *self, PyObject *args ) {
   int input;
@@ -14,14 +14,15 @@ static PyObject * fib_wrapper( PyObject *self, PyObject *args ) {
 
   // run the actual function
   result = fib(input);
-
   ret = PyList_New(input);
+
   for (i = 0; i < input; i++) {
-      PyList_Append(ret, PyInt_FromLong(result[i]));
+      PyList_SetItem(ret, i, PyInt_FromLong(result[i]));
   }
+
+  //ret = PyInt_FromLong(result[1]);
   // build the resulting string into a Python object.
-  //ret = PyString_FromString(result);
-  free(result);
+  //free(result);
   return ret;
 }
 
