@@ -20,11 +20,3 @@ int * fib(int n) {
    return result;
 }
 
-int main() {
-   int c;
-   int * result = fib(20);
-   for(c = 0; c < 20; c++) {
-       printf("%d\n", result[c]);
-   }
-   free(result);
-}

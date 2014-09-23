@@ -69,6 +69,30 @@ except AttributeError:
     _newclass = 0
 
 
+class intp(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, intp, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, intp, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _hello.new_intp(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_destroy__ = _hello.delete_intp
+    __del__ = lambda self : None;
+    def __getitem__(self, *args): return _hello.intp___getitem__(self, *args)
+    def __setitem__(self, *args): return _hello.intp___setitem__(self, *args)
+    def cast(self): return _hello.intp_cast(self)
+    __swig_getmethods__["frompointer"] = lambda x: _hello.intp_frompointer
+    if _newclass:frompointer = staticmethod(_hello.intp_frompointer)
+intp_swigregister = _hello.intp_swigregister
+intp_swigregister(intp)
+
+def intp_frompointer(*args):
+  return _hello.intp_frompointer(*args)
+intp_frompointer = _hello.intp_frompointer
+
 
 def fib(*args):
   return _hello.fib(*args)

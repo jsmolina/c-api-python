@@ -2,7 +2,20 @@
 
 %{
 #include <stdlib.h>
-#include "hellomodule.h"
+#include "hellomodule.c"
 %}
 
-%include "hellomodule.h"
+
+%typemap(out) int* fib {
+  int i;
+  size_t  templen = 10;
+  $result = PyList_New(templen);
+  for (i = 0; i < templen; i++) {
+    PyObject *o = PyInt_FromLong((int)$1[i]);
+    PyList_SetItem($result,i,o);
+  }
+}
+
+%include "carrays.i"
+%array_class(int, intp);
+%include "hellomodule.c"
