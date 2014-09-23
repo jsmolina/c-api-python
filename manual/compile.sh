@@ -1,5 +1,5 @@
 #!/bin/sh
 python setup.py build
-cd build/lib.macosx-10.9-intel-2.6
+cp build/lib.macosx-10.9-intel-2.6/*.so .
 python chello.py
-cd -
+
