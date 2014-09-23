@@ -22,7 +22,6 @@ static PyObject * fib_wrapper( PyObject *self, PyObject *args ) {
   // build the resulting string into a Python object.
   //ret = PyString_FromString(result);
   free(result);
-
   return ret;
 }
 

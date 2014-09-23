@@ -4,7 +4,7 @@
 int * fib(int n) {
    int first = 0, second = 1, next, c;
    int * result = (int *) malloc(sizeof(int) * n); 
-   printf("First %d terms of Fibonacci series are :-\n",n);
+   //printf("First %d terms of Fibonacci series are :-\n",n);
  
    for ( c = 0 ; c < n ; c++ )
    {
@@ -23,7 +23,7 @@ int * fib(int n) {
 
 int main() {
    int c;
-   int * result = fib(20);
+   int * result = fib(10);
    for(c = 0; c < 20; c++) {
        printf("%d\n", result[c]);
    }
