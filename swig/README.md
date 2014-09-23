@@ -1,3 +1,3 @@
-c-types
-=======
-Instead of providing a wrapper, just dynamic linking shared object from python.
+swig
+====
+Use of swig macros is not so as easy as other wrappers...
