@@ -1,3 +1,6 @@
+# Thanks to
+Author: @logc
+
 # Boostexample
 
 An example on how to use Boost.Python in order to write Python extensions in
