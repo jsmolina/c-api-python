@@ -1,5 +1,5 @@
 # Thanks to
-Author: @logc
+https://github.com/logc
 
 # Boostexample
 
