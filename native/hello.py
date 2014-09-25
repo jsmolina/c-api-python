@@ -16,5 +16,6 @@ def fib(n):
    return result;
 
 if __name__ == "__main__":
+   print fib(100)
    print timeit.timeit("fib(10)", "from __main__ import fib")
 
