@@ -1,3 +1,3 @@
 #!/bin/sh
-python setup.py develop
+python setup.py install
 python chello.py

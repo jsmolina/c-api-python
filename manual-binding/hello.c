@@ -3,7 +3,7 @@
 
 static PyObject * fib_wrapper( PyObject *self, PyObject *args ) {
   int input;
-  int * result;
+  unsigned long * result;
   PyObject * ret;
   int i;
 

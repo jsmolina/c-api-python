@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int * fib(int n) {
+unsigned long * fib(int n) {
    int first = 0, second = 1, next, c;
-   int * result = (int *) malloc(sizeof(int) * n); 
-   //printf("First %d terms of Fibonacci series are :-\n",n);
- 
+   unsigned long * result = (unsigned long *) malloc(sizeof(unsigned long) * n);
+
    for ( c = 0 ; c < n ; c++ )
    {
       if ( c <= 1 )
@@ -23,9 +22,9 @@ int * fib(int n) {
 
 int main() {
    int c;
-   int * result = fib(10);
-   for(c = 0; c < 20; c++) {
-       printf("%d\n", result[c]);
+   unsigned long * result = fib(10);
+   for(c = 0; c < 10; c++) {
+       printf("%long\n", result[c]);
    }
    free(result);
 }

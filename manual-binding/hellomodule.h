@@ -1,1 +1,1 @@
-int * fib(int n);
+unsigned long * fib(int n);
