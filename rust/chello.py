@@ -2,6 +2,6 @@ import timeit
 from rust_fib import fib
 
 print("result!")
-print(fib(50))
+print(fib(47))
 
-print(timeit.timeit("fib(50)", "from rust_fib import fib"))
+print(timeit.timeit("fib(47)", "from rust_fib import fib"))

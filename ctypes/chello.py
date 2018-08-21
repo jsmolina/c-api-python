@@ -1,8 +1,5 @@
-import timeit
-#from ctypes import cdll, POINTER, c_ulong, cast, pointer, c_int
 import ctypes
 from timeit import Timer
-
 
 
 def fib(array):
@@ -13,17 +10,19 @@ def fib(array):
 
 
 if __name__ == "__main__":
+   SIZE = 47
+
    fib_lib = ctypes.cdll.LoadLibrary("fib.so")
 
    fib_lib.fib.restype = None
    fib_lib.fib.argtypes = (ctypes.c_int,
                                  ctypes.POINTER(ctypes.c_ulong))
 
-   res = [0] * 50
+   res = [0] * SIZE
    print(fib(res)[:])
 
 
-   array = (ctypes.c_ulonglong * 50)(*res)
+   array = (ctypes.c_ulonglong * SIZE)(*res)
 
-   t = Timer(lambda: fib_lib.fib(50, array))
+   t = Timer(lambda: fib_lib.fib(SIZE, array))
    print(t.timeit())

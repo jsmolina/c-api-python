@@ -17,9 +17,9 @@ def fib(n):
    return result
 
 if __name__ == "__main__":
-   r = fib(100)
+   r = fib(47)
    print(f'length {len(r)}')
    print(f'result={r}')
 
-   print(timeit.timeit("fib(10)", "from __main__ import fib"))
+   print(timeit.timeit("fib(47)", "from __main__ import fib"))
 
