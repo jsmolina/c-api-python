@@ -24,3 +24,6 @@ example using boost
 
 # cython
 pure implementation in cython
+
+# swig
+swig bindings to use C code.
