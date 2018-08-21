@@ -1,5 +1,7 @@
 .idea
 .venv
+swig/_hello_module.cc
+swig/hello.py
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

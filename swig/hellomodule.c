@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int * fib(int n) {
+unsigned long * fib(int n) {
    int first = 0, second = 1, next, c;
-   int * result = (int *) malloc(sizeof(int) * n); 
+   unsigned long * result = (unsigned long *) malloc(sizeof(unsigned long) * n);
  
    for ( c = 0 ; c < n ; c++ )
    {

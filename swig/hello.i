@@ -6,12 +6,12 @@
 %}
 
 
-%typemap(out) int* fib {
+%typemap(out) unsigned long * fib {
   int i;
-  size_t  templen = 100;
+  size_t  templen = 47;
   $result = PyList_New(templen);
   for (i = 0; i < templen; i++) {
-    PyObject *o = PyInt_FromLong((int)$1[i]);
+    PyObject *o = PyInt_FromLong((long)$1[i]);
     PyList_SetItem($result,i,o);
   }
 }
