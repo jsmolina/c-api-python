@@ -1,14 +1,29 @@
 import timeit
-from ctypes import cdll, POINTER, c_ulonglong, cast, pointer
-#from numpy.ctypeslib import ndpointer
+#from ctypes import cdll, POINTER, c_ulong, cast, pointer, c_int
+import ctypes
 from timeit import Timer
 
+
+
+def fib(array):
+   array_size = len(array)
+   array = (ctypes.c_ulong * array_size)(*array)
+   fib_lib.fib(array_size, array)
+   return array
+
+
 if __name__ == "__main__":
-   fib_lib = cdll.LoadLibrary("fib.so")
+   fib_lib = ctypes.cdll.LoadLibrary("fib.so")
 
-   fib_lib.fib.restype = c_ulonglong * 100
-   result = fib_lib.fib(100)
-   print([i for i in result])
+   fib_lib.fib.restype = None
+   fib_lib.fib.argtypes = (ctypes.c_int,
+                                 ctypes.POINTER(ctypes.c_ulong))
 
-   t = Timer(lambda: fib_lib.fib(100))
+   res = [0] * 50
+   print(fib(res)[:])
+
+
+   array = (ctypes.c_ulonglong * 50)(*res)
+
+   t = Timer(lambda: fib_lib.fib(50, array))
    print(t.timeit())

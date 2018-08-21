@@ -1,0 +1,13 @@
+[package]
+authors = ["Whatever<>"]
+name = "rust-fib"
+version = "0.1.0"
+
+[dependencies]
+pyo3 = { version = "*", features = ["extension-module"] }
+english-lint = "*"
+
+[lib]
+crate-type = ["cdylib"]
+name = "rust_fib"
+path = "./src/lib.rs"
