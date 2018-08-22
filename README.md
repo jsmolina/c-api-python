@@ -27,3 +27,6 @@ pure implementation in cython
 
 # swig
 swig bindings to use C code.
+
+# numba
+just use of jit decorator.
