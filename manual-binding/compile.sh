@@ -1,5 +1,5 @@
 #!/bin/sh
-python setup.py install
+python setup.py build_ext --inplace
 
 python chello.py
 

@@ -1,6 +1,12 @@
-manual
-=====
-Manual way means creating a wrapper per each function called.
+Binding manually
+================
+Manual binding implies developing a wrapper per each function called.
+It uses Python.h, so if you receive any Symbol not found error, 
+please check that it matches current executed python.
 
-Sometimes gets painful
+result
+======
+So fast! 1.00869297981 seconds.
+
+
 
