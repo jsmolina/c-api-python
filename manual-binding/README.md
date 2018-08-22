@@ -6,7 +6,7 @@ please check that it matches current executed python.
 
 result
 ======
-So fast! 1.00869297981 seconds.
+So fast! 1.00869297981 seconds over 100000 executions.
 
 
 
