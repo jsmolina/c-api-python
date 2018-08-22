@@ -7,7 +7,7 @@ Also consider that normally you will want to pass a long-executing function inst
 
 result
 ======
-This Rust implementation takes about 12 secs to execute 100 times using timeit on my MacBookPro i7.
+This Rust implementation takes about 12 secs to execute 100000 times using timeit on my MacBookPro i7.
 
 see also
 ========
