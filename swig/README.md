@@ -6,4 +6,4 @@ This example requires swig to be installed in your machine.
 
 result
 ======
-1.19 seconds for 100 executions, not bad.
+1.19 seconds over 100000 executions, not bad.
