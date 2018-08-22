@@ -9,4 +9,4 @@ import dis; dis.dis(fib)
 
 result
 ======
-7.87 seconds for 100 executions.
+7.87 seconds for 100000 executions.
