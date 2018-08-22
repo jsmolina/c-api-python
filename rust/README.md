@@ -1,4 +1,4 @@
-== RUST ==
+**RUST**
 
 This Rust implementation takes about 12 secs to execute on my MacBookPro i7.
 
