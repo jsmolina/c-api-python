@@ -1,12 +1,10 @@
-Binding manually
+Binding with cffi
 ================
-Manual binding implies developing a wrapper per each function called.
-It uses Python.h, so if you receive any Symbol not found error, 
-please check that it matches current executed python.
+It was so easy and fast.
 
 result
 ======
-So fast! 1.00869297981 seconds over 100000 executions.
+Good result! 0.820990800858 seconds over 100000 executions.
 
 
 
